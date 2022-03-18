@@ -31,9 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'shift.app.login.apps.LoginConfig',
-    'shift.app.user.apps.UserConfig',
-    'shift.app.manager.apps.ManagerConfig',
+    'login.apps.LoginConfig',
+    'user.apps.UserConfig',
+    'manager.apps.ManagerConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
