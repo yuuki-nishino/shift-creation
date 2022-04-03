@@ -1,6 +1,7 @@
 version: "3.9"
 
 services:
+
   db:
     image: postgres
     volumes:
@@ -9,11 +10,16 @@ services:
       - POSTGRES_NAME=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-  web:
-    build: .
-    # command: python3 manage.py runserver 0.0.0.0:8000
+    ports: 
+      - "5433:5432"
+
+
+  django:
+    build: 
+      context: ./docker/django
+      dockerfile: Dockerfile
     volumes:
-      - ./src:/code
+      - ./src/app:/code/
     ports:
       - "8000:8000"
     environment:
@@ -22,4 +28,17 @@ services:
       - POSTGRES_PASSWORD=postgres
     depends_on:
       - db
+    tty: true
+
+
+  vue:
+    build:
+      context: ./docker/vue
+      dockerfile: Dockerfile
+    volumes: 
+      - ./src/frontend:/app
+    ports: 
+      - "3000:3000"
+    depends_on:
+      - django
     tty: true
