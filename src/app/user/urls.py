@@ -1,9 +1,10 @@
 from django.urls import path
 
-from . import views
+from . import view
+
 
 app_name = 'user'
 
 urlpatterns = [
-    path('', views.view1.index, name='index'),
+    path('api/', view.ShiftList.as_view(), name='shift_list'),
 ]
