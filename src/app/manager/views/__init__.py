@@ -1,1 +1,0 @@
-from .view1 import index
