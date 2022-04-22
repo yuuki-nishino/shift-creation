@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 # Create your models here.
+
 class Store(models.Model):
     name = models.CharField(max_length = 50)
 
@@ -26,13 +27,15 @@ class User(models.Model):
 
 class Shift(models.Model):
 
-    store = models.ForeignKey(Store, on_delete=models.PROTECT, related_name='店名')
-    start_time = models.DateTimeField('開始時刻')
-    end_time = models.DateTimeField('終了時刻')
-    worker = models.ForeignKey(User, on_delete=models.PROTECT, related_name='勤務者')
+    date = models.DateField('日付')
+    store = models.ForeignKey(Store, on_delete=models.PROTECT, related_name='storename')
+    worker1 = models.ForeignKey(User, on_delete=models.PROTECT, related_name='part1')
+    worker2 = models.ForeignKey(User, on_delete=models.PROTECT, related_name='part2')
+    worker3 = models.ForeignKey(User, on_delete=models.PROTECT, related_name='part3')
+    worker4 = models.ForeignKey(User, on_delete=models.PROTECT, related_name='part4')
     created_at = models.DateField('作成日', default=timezone.now)
 
     def __str__(self):
-        return self.start_time.strftime("%Y/%m/%d") + ',' + str(self.store)
+        return self.date.strftime("%Y/%m/%d") + ',' + str(self.store)
 
 
