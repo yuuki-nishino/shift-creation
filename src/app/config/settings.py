@@ -31,9 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'login.apps.LoginConfig',
-    'user.apps.UserConfig',
-    'manager.apps.ManagerConfig',
+    'shirotengu.apps.ShirotenguConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

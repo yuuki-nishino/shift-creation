@@ -16,14 +16,9 @@ class UserSerializer(serializers.ModelSerializer):
 
 class ShiftSerializer(serializers.ModelSerializer):
 
-    worker1 = serializers.StringRelatedField()
-    worker2 = serializers.StringRelatedField()
-    worker3 = serializers.StringRelatedField()
-    worker4 = serializers.StringRelatedField()
+    worker = serializers.StringRelatedField()
     store = serializers.StringRelatedField()
 
     class Meta:
         model = Shift
         fields = '__all__'
-
-
