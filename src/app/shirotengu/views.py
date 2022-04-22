@@ -1,3 +1,5 @@
+from django.shortcuts import render
+
 from rest_framework import generics
 from .models import Store,User,Shift
 from .serializers import StoreSerializer, UserSerializer,ShiftSerializer
