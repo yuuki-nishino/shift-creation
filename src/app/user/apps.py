@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ShirotenguConfig(AppConfig):
+class UserConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'shirotengu'
+    name = 'user'
