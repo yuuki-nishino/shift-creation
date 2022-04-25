@@ -31,12 +31,12 @@ services:
     tty: true
 
 
-  vue:
+  front:
     build:
-      context: ./docker/vue
+      context: ./docker/nuxt
       dockerfile: Dockerfile
     volumes: 
-      - ./src/frontend:/app
+      - ./src/frontend:/code
     ports: 
       - "3000:3000"
     depends_on:

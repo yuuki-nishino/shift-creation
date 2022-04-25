@@ -1,0 +1,17 @@
+{
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
+  },
+  "ShiftCalendar": {
+    "description": "Auto imported from components/ShiftCalendar.vue"
+  },
+  "TheHeader": {
+    "description": "Auto imported from components/TheHeader.vue"
+  },
+  "Tutorial": {
+    "description": "Auto imported from components/Tutorial.vue"
+  },
+  "VuetifyLogo": {
+    "description": "Auto imported from components/VuetifyLogo.vue"
+  }
+}
